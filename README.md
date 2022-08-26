@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Varad</h1>
-<h3 align="center">A student at Swinburne University of Technology</h3>
+<h3 align="center">A student at Swinburne University of Technology currently studying Bachelor of Engineering (Robotics and Mechatronics) / Bachelor of Computer Science (Internet of Things)</h3>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
