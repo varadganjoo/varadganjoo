@@ -2,7 +2,7 @@
 <h3 align="center">An Alumni from Swinburne University of Technology currently studying Bachelor of Engineering (Robotics and Mechatronics) / Bachelor of Computer Science (Internet of Things)</
 h3>
 
-<h3 align="left">Projects</h3>
+<h3 align="left">Projects:</h3>
 <p align="left">
 <a href="https://stockwiseai.streamlit.app/" target="blank">📈 StockWise AI</a> <br />
 <a href="https://shopping-basket-83e33.web.app/" target="blank">Shopping Basket Tool</a><br />
