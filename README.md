@@ -5,7 +5,12 @@ h3>
 <h3 align="left">Projects</h3>
 <p align="left">
 <a href="https://stockwiseai.streamlit.app/" target="blank">📈 StockWise AI</a> <br />
-<a href="https://shopping-basket-83e33.web.app/" target="blank">Shopping Basket Tool</a>
+<a href="https://shopping-basket-83e33.web.app/" target="blank">Shopping Basket Tool</a><br />
+<a href="https://github.com/varadganjoo/RubyMusicPlayer" target="blank">Ruby Music Player</a><br />
+<a href="https://github.com/varadganjoo/InventoryManagement" target="blank">Inventory Management</a><br />
+<a href="https://github.com/varadganjoo/COS40004_Dashboard" target="blank">IoT Dashboard</a>
+<a href="https://github.com/varadganjoo/EAT40003-SWE40001-Persona-Chatbot" target="blank">Cyber attacker persona chatbot</a>
+
 </p>
 
 <h3 align="left">Connect with me:</h3>
