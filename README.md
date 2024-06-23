@@ -5,6 +5,7 @@ h3>
 <h3 align="left">Projects:</h3>
 <p align="left">
 <a href="https://stockwiseai.streamlit.app/" target="blank">📈 StockWise AI</a> <br />
+<a href="https://trendwiseai.streamlit.app/" target="blank">📊 Trendwise AI</a> <br />
 <a href="https://shopping-basket-83e33.web.app/" target="blank">Shopping Basket Tool</a><br />
 <a href="https://github.com/varadganjoo/RubyMusicPlayer" target="blank">Ruby Music Player</a><br />
 <a href="https://github.com/varadganjoo/InventoryManagement" target="blank">Inventory Management</a><br />
