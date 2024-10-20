@@ -5,6 +5,7 @@ h3>
 <h3 align="left">Projects:</h3>
 <p align="left">
 <a href="https://github.com/varadganjoo/realtime_voice_assistant" target="blank">🗣️ Realtime Voice Assistant</a><br />
+<a href="https://github.com/varadganjoo/RealTime-Speech-Transcription" target="blank">📝 Real Time Speech Transcription with Grammar Correction</a><br />
 <a href="https://stockwiseai.streamlit.app/" target="blank">📈 StockWise AI</a> <br />
 <a href="https://trendwiseai.streamlit.app/" target="blank">📊 Trendwise AI</a> <br />
 <a href="https://github.com/varadganjoo/InstagramBot" target="blank">🤖 Automated Instagram News Bot</a> <br />
