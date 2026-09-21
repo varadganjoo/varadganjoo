@@ -4,17 +4,10 @@ h3>
 
 <h3 align="left">Projects:</h3>
 <p align="left">
-<a href="https://github.com/varadganjoo/realtime_voice_assistant" target="blank">🗣️ Realtime Voice Assistant</a><br />
 <a href="https://github.com/varadganjoo/RealTime-Speech-Transcription" target="blank">📝 Real Time Speech Transcription with Grammar Correction</a><br />
 <a href="https://github.com/varadganjoo/realtime-voice-and-vision-assistant" target="blank">👁️🗣️ Voice and Vision Assistant</a><br />
 <a href="https://stockwiseai.streamlit.app/" target="blank">📈 StockWise AI</a> <br />
 <a href="https://trendwiseai.streamlit.app/" target="blank">📊 Trendwise AI</a> <br />
-<a href="https://github.com/varadganjoo/InstagramBot" target="blank">🤖 Automated Instagram News Bot</a> <br />
-<a href="https://github.com/varadganjoo/EAT40003-SWE40001-Persona-Chatbot" target="blank">🛡️ Cyber Attacker Persona Chatbot</a><br />
-<a href="https://shopping-basket-83e33.web.app/" target="blank">🛒 Shopping Basket Tool</a><br />
-<a href="https://github.com/varadganjoo/RubyMusicPlayer" target="blank">🎵 Ruby Music Player</a><br />
-<a href="https://github.com/varadganjoo/InventoryManagement" target="blank">📦 Inventory Management</a><br />
-<a href="https://github.com/varadganjoo/COS40004_Dashboard" target="blank">📊 IoT Dashboard</a><br />
 </p>
 
 
