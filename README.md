@@ -27,7 +27,7 @@ Quant research terminal on live market data: Monte Carlo forecasts, an adversari
 - **Backtested Quant Engine**: Jump-diffusion Monte Carlo with fractional-Kelly sizing and VaR limits, scored walk-forward on 15 years of real prices (held-out rank IC +0.07).
 - **Portfolio Manager Gate**: LangGraph `interrupt()` pauses every staged order for approval, with overrides capped at the 15% position limit.
 
-### 🛡️ [Aegis SRE](https://github.com/varadganjoo/aegis-sre) · [Live demo](https://aegis-sre-snowy.vercel.app)
+### 🛡️ [Aegis SRE](https://github.com/varadganjoo/aegis-sre)
 Incident-response agent for a simulated microservice cluster, with deterministic blast-radius checks and an SRE approval gate.
 - **Model Proposes, Code Gates**: Gemini, with Groq as a backup, diagnoses novel alerts into a structured proposal that must pass an action allowlist with bounded parameters; rules take over when the model is unavailable.
 - **Skills as Data**: Known signatures resolve through stored skills (threshold conditions plus one validated action), so nothing is generated or executed from model or operator text.
