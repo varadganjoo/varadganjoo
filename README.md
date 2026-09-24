@@ -27,10 +27,11 @@ Quant research terminal on live market data: Monte Carlo forecasts, an adversari
 - **Backtested Quant Engine**: Jump-diffusion Monte Carlo with fractional-Kelly sizing and VaR limits, scored walk-forward on 15 years of real prices (held-out rank IC +0.07).
 - **Portfolio Manager Gate**: LangGraph `interrupt()` pauses every staged order for approval, with overrides capped at the 15% position limit.
 
-### 🛡️ [Aegis SRE](https://github.com/varadganjoo/aegis-sre)
-Autonomous site reliability engineering agent with isolated skill synthesis and blast-radius safety gates.
-- **Isolated Subprocess Execution**: Synthesizes and tests remediation scripts in isolated subprocesses with scrubbed environment variables and strict timeouts.
-- **Dual-Critic Reflexion Engine**: Safety Critic and SRE Reviewer validate proposed actions against immutable blast-radius constraints.
+### 🛡️ [Aegis SRE](https://github.com/varadganjoo/aegis-sre) · [Live demo](https://aegis-sre-snowy.vercel.app)
+Incident-response agent for a simulated microservice cluster, with deterministic blast-radius checks and an SRE approval gate.
+- **Model Proposes, Code Gates**: Gemini, with Groq as a backup, diagnoses novel alerts into a structured proposal that must pass an action allowlist with bounded parameters; rules take over when the model is unavailable.
+- **Skills as Data**: Known signatures resolve through stored skills (threshold conditions plus one validated action), so nothing is generated or executed from model or operator text.
+- **Learning from Overrides**: LangGraph `interrupt()` waits for an SRE to approve, override, or reject; overrides become scoped skills and rejections become invariants that veto the action next time.
 
 ### ⚙️ [Enterprise AI Systems Engineering Suite](https://github.com/varadganjoo/enterprise-ai-systems)
 A suite of 9 independent AI architectures demonstrating deterministic guardrails, state-machine orchestration, and evals-as-code:
