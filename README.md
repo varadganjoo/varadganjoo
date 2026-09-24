@@ -14,17 +14,18 @@ An experimental language model and continuous learning platform built from scrat
 - **Incremental Learning Architecture**: Explores continuous language acquisition through dynamic n-gram memory, adaptive token embeddings, and a PyTorch GRU with multi-head attention.
 - **Interactive CLI & Training Harness**: Supports incremental ingestion from text corpora and web crawls, human feedback loops, replay buffers, and GPU execution controls.
 
-### 🏥 [CareFlow Clinical Agent](https://github.com/varadganjoo/careflow-clinical-agent)
-Clinical decision support and EHR documentation platform built on a durable LangGraph state machine.
-- **Deterministic Pharmacological Safety Engine**: Code-level invariants running before LLM generation that block contraindicated medication combinations (e.g., dual RAS blockade) and flag critical lab thresholds (hyperkalemia, severe CKD).
-- **Clinical Practice Guidelines**: Formalized ACC/AHA hypertension and ADA diabetes standards with verbatim citation verification.
-- **Human-in-the-Loop Review Gate**: Uses LangGraph `interrupt()` to enforce mandatory physician sign-off before committing clinical notes to the EHR.
+### 🏥 [CareFlow Clinical Agent](https://github.com/varadganjoo/careflow-clinical-agent) · [Live demo](https://careflow-clinical-agent.vercel.app)
+Clinical decision support and SOAP-note scribe built on a LangGraph state machine with a physician sign-off gate.
+- **Deterministic Safety Checks**: Code-level rules run before the model is called and flag contraindicated combinations (e.g., dual RAS blockade, metformin with low eGFR) and critical labs (hyperkalemia).
+- **De-identified Ambient Scribe**: The encounter transcript and patient record pass through a PHI token vault (names, MRNs, contact details) before Gemini, with Groq as a backup, drafts a structured SOAP note with ICD-10 and CPT codes.
+- **Human-in-the-Loop Sign-off**: LangGraph `interrupt()` holds every draft until a physician approves, edits, or rejects it; only signed notes reach the writeback step.
 
-### 📈 [Apex-Alpha](https://github.com/varadganjoo/apex-alpha)
-Quantitative forecasting and multi-agent investment committee platform with streaming consensus debate.
-- **Adversarial Multi-Agent Debate**: Bull Equity Analyst and Bear Risk Officer agents debate asset allocations grounded in SEC disclosures.
-- **Quantitative Engine**: 10,000-path Monte Carlo price path simulations with Kelly criterion position sizing and parametric Value at Risk (VaR).
-- **Portfolio Manager Review Gate**: Stateful LangGraph workflow with deterministic circuit breakers pausing high-volatility allocations for human sign-off.
+### 📈 [Apex-Alpha](https://github.com/varadganjoo/apex-alpha) · [Live demo](https://apex-alpha-tan.vercel.app)
+Quant research terminal on live market data: Monte Carlo forecasts, an adversarial LLM investment committee, and a portfolio manager sign-off gate.
+- **Live Data**: Prices from Yahoo Finance, fundamentals and filing excerpts from SEC EDGAR, and the risk-free rate from the U.S. Treasury, each cached with a labeled fallback.
+- **Grounded Multi-Agent Debate**: Bull and Bear agents argue from the latest 10-Q or 10-K, and every citation is checked word for word against the filing.
+- **Backtested Quant Engine**: Jump-diffusion Monte Carlo with fractional-Kelly sizing and VaR limits, scored walk-forward on 15 years of real prices (held-out rank IC +0.07).
+- **Portfolio Manager Gate**: LangGraph `interrupt()` pauses every staged order for approval, with overrides capped at the 15% position limit.
 
 ### 🛡️ [Aegis SRE](https://github.com/varadganjoo/aegis-sre)
 Autonomous site reliability engineering agent with isolated skill synthesis and blast-radius safety gates.
@@ -48,8 +49,8 @@ A suite of 9 independent AI architectures demonstrating deterministic guardrails
 ## Technical Stack
 
 - **Core Languages**: Python, TypeScript, SQL
-- **AI & Orchestration**: LangGraph, LangChain, Pydantic, Model Context Protocol (MCP), Gemini SDK, PyTorch
-- **Backend & Data**: FastAPI, SQLite, PostgreSQL, `sqlglot`
+- **AI & Orchestration**: LangGraph, LangChain, Pydantic, Model Context Protocol (MCP), Gemini SDK, Groq, PyTorch
+- **Backend & Data**: FastAPI, SQLite, PostgreSQL, `sqlglot`, SEC EDGAR XBRL, yfinance
 - **Frontend & Visualization**: Modern HTML5/Tailwind CSS, React, Chart.js
 - **Engineering Rigor**: Unit testing (`pytest`), evals-as-code, AST analysis, CI/CD with GitHub Actions
 
