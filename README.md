@@ -1,57 +1,61 @@
 # Varad Ganjoo
 
-**AI Systems & Software Engineer** | Texas, United States  
-[LinkedIn](https://www.linkedin.com/in/varad-ganjoo-3137631b2/) · [Email](mailto:varadganjoo@gmail.com)
+**AI Systems & Software Engineer**
 
-I build reliable, deterministic AI systems with durable state machines, AST-enforced security guards, and human-in-the-loop workflows. My focus is on making generative AI dependable in enterprise environments where hallucinations and unconstrained execution are unacceptable.
+I build developer tools and stateful AI applications, with a focus on agent memory, tool execution, and human approval.
 
----
+[LinkedIn](https://www.linkedin.com/in/varad-ganjoo-3137631b2/) | [Email](mailto:varadganjoo@gmail.com)
 
 ## Featured Projects
 
-### 🧠 [Baby LLM](https://github.com/varadganjoo/baby-llm)
-An experimental language model and continuous learning platform built from scratch in PyTorch.
-- **Incremental Learning Architecture**: Explores continuous language acquisition through dynamic n-gram memory, adaptive token embeddings, and a PyTorch GRU with multi-head attention.
-- **Interactive CLI & Training Harness**: Supports incremental ingestion from text corpora and web crawls, human feedback loops, replay buffers, and GPU execution controls.
+### [MemKernel](https://github.com/varadganjoo/MemKernel)
 
-### 🏥 [CareFlow Clinical Agent](https://github.com/varadganjoo/careflow-clinical-agent) · [Live demo](https://careflow-clinical-agent.vercel.app)
-Clinical decision support and SOAP-note scribe built on a LangGraph state machine with a physician sign-off gate.
-- **Deterministic Safety Checks**: Code-level rules run before the model is called and flag contraindicated combinations (e.g., dual RAS blockade, metformin with low eGFR) and critical labs (hyperkalemia).
-- **De-identified Ambient Scribe**: The encounter transcript and patient record pass through a PHI token vault (names, MRNs, contact details) before Gemini, with Groq as a backup, drafts a structured SOAP note with ICD-10 and CPT codes.
-- **Human-in-the-Loop Sign-off**: LangGraph `interrupt()` holds every draft until a physician approves, edits, or rejects it; only signed notes reach the writeback step.
+Shared local memory for coding agents. Persistent decisions, investigation branches, memory rollback, and token-budgeted snapshots built on an append-only SQLite event log.
 
-### 📈 [Apex-Alpha](https://github.com/varadganjoo/apex-alpha) · [Live demo](https://apex-alpha-tan.vercel.app)
-Quant research terminal on live market data: Monte Carlo forecasts, an adversarial LLM investment committee, and a portfolio manager sign-off gate.
-- **Live Data**: Prices from Yahoo Finance, fundamentals and filing excerpts from SEC EDGAR, and the risk-free rate from the U.S. Treasury, each cached with a labeled fallback.
-- **Grounded Multi-Agent Debate**: Bull and Bear agents argue from the latest 10-Q or 10-K, and every citation is checked word for word against the filing.
-- **Backtested Quant Engine**: Jump-diffusion Monte Carlo with fractional-Kelly sizing and VaR limits, scored walk-forward on 15 years of real prices (held-out rank IC +0.07).
-- **Portfolio Manager Gate**: LangGraph `interrupt()` pauses every staged order for approval, with overrides capped at the 15% position limit.
+Local agents coordinate through leases and notices. Separate machines can exchange signed notices through a synced folder; direct memory sync is still in development.
 
-### 🛡️ [Aegis SRE](https://github.com/varadganjoo/aegis-sre)
-Incident-response agent for a simulated microservice cluster, with deterministic blast-radius checks and an SRE approval gate.
-- **Model Proposes, Code Gates**: Gemini, with Groq as a backup, diagnoses novel alerts into a structured proposal that must pass an action allowlist with bounded parameters; rules take over when the model is unavailable.
-- **Skills as Data**: Known signatures resolve through stored skills (threshold conditions plus one validated action), so nothing is generated or executed from model or operator text.
-- **Learning from Overrides**: LangGraph `interrupt()` waits for an SRE to approve, override, or reject; overrides become scoped skills and rejections become invariants that veto the action next time.
+[Python package](https://pypi.org/project/memkernel-mcp/) | [Design and benchmarks](https://github.com/varadganjoo/MemKernel/blob/main/docs/whitepaper.md)
 
-### ⚙️ [Enterprise AI Systems Engineering Suite](https://github.com/varadganjoo/enterprise-ai-systems)
-A suite of 9 independent AI architectures demonstrating deterministic guardrails, state-machine orchestration, and evals-as-code:
-- **01 Cited Knowledge Agent**: Verifiable grounding with character-level span offsets and temporal policy supersession.
-- **02 Document Extraction**: Accounting reconciler verifying line-item math and routing low-confidence scans to human triage.
-- **03 Operator Agent**: Stateful operator with tool allowlists, PII/credential guardrails, and supervisor approval queues.
-- **04 Analytics Copilot**: Read-only SQL copilot enforcing AST validation via `sqlglot` (SELECT-only, table allowlist, row limits).
-- **05 Model Router**: Multi-tiered semantic router triaging simple queries to lightweight models and complex reasoning to frontier models.
-- **06 Memory Service**: Entity slot memory with deterministic supersession tracking and bidirectional PII redaction token vault.
-- **07 Claim Auditor**: Atomic proposition fact-checking computing evidence-based verdicts against governing documents.
-- **08 Case Workflow**: Event-sourced refund state machine with idempotent processing and hard financial category caps.
-- **09 Multi-Hop Brief**: DAG-based multi-document reasoning that gates final conclusions if intermediate hops lack citations.
+### [AutoTool](https://github.com/varadganjoo/Autotool)
 
----
+An MCP tool layer that lets agents create and reuse Python tools as they work. It verifies tools in separate processes, loads them without restarting the server, and keeps them available across agent clients.
+
+Credential access uses per-tool declarations and consent, with host allowlists and output redaction.
+
+[Python package](https://pypi.org/project/autotool-mcp/) | [Design and evaluation](https://github.com/varadganjoo/Autotool/blob/main/paper/autotool.md)
+
+### [WebAgent Protocol](https://github.com/varadganjoo/WebAgent-Protocol)
+
+A Python SDK and proposed MCP extension for discovering tools published by websites. Signed manifests and responses let clients verify what a site returned.
+
+Includes a FastAPI server, MCP bridge, confirmation hooks for side effects, rate limits, replay protection, and bounded multi-turn interactions.
+
+[Python package](https://pypi.org/project/webagent-protocol/) | [MCP extension proposal](https://github.com/varadganjoo/WebAgent-Protocol/blob/main/docs/mcp_extension.md)
+
+## Applied AI Systems
+
+| Project | Engineering focus |
+| --- | --- |
+| [CareFlow Clinical Agent](https://github.com/varadganjoo/careflow-clinical-agent) ([demo](https://careflow-clinical-agent.vercel.app)) | Clinical documentation demo with de-identification, code-level safety checks, and physician sign-off. Uses fictional patients; not clinically validated. |
+| [Apex-Alpha](https://github.com/varadganjoo/apex-alpha) ([demo](https://apex-alpha-tan.vercel.app)) | Research terminal combining market data, Monte Carlo simulations, filing-grounded agent debate, and human review of staged orders. |
+| [Aegis SRE](https://github.com/varadganjoo/aegis-sre) | Incident-response simulation with validated actions, blast-radius checks, and operator feedback recorded as reusable rules. |
+| [Enterprise AI Systems](https://github.com/varadganjoo/enterprise-ai-systems) | Nine runnable reference applications covering cited retrieval, document extraction, read-only SQL, event-sourced workflows, and evaluation. |
+
+<details>
+<summary>See the CareFlow documentation workflow</summary>
+
+![CareFlow demo showing an editable SOAP note for a fictional patient](https://raw.githubusercontent.com/varadganjoo/careflow-clinical-agent/main/docs/images/03_scribe.png)
+
+</details>
+
+I also maintain [Baby LLM](https://github.com/varadganjoo/baby-llm), a learning experiment combining incremental n-gram memory, adaptive embeddings, and a PyTorch GRU with attention.
 
 ## Technical Stack
 
-- **Core Languages**: Python, TypeScript, SQL
-- **AI & Orchestration**: LangGraph, LangChain, Pydantic, Model Context Protocol (MCP), Gemini SDK, Groq, PyTorch
-- **Backend & Data**: FastAPI, SQLite, PostgreSQL, `sqlglot`, SEC EDGAR XBRL, yfinance
-- **Frontend & Visualization**: Modern HTML5/Tailwind CSS, React, Chart.js
-- **Engineering Rigor**: Unit testing (`pytest`), evals-as-code, AST analysis, CI/CD with GitHub Actions
+**Languages:** Python, TypeScript, SQL  
+**Agent systems:** MCP, LangGraph, LangChain, Pydantic, PyTorch  
+**Backend and data:** FastAPI, SQLite, PostgreSQL, Redis  
+**Interfaces:** React, Tailwind CSS, Chart.js  
+**Delivery:** pytest, reproducible evaluations, package releases, GitHub Actions
 
+My approach is to keep state explicit, validate model proposals in code, and test the failure paths as well as the successful ones.
