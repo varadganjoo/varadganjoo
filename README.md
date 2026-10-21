@@ -12,10 +12,10 @@ Three independent libraries for the infrastructure around an agent:
 
 ```mermaid
 flowchart TB
-    agent["Coding agents & custom harnesses"]
-    agent -->|"Remember decisions"| memory["MemKernel<br/>Branchable local memory"]
-    agent -->|"Build capabilities"| tools["AutoTool<br/>Reusable Python tools"]
-    agent -->|"Discover website tools"| web["WebAgent Protocol<br/>Signed manifests & responses"]
+    agent["AI agents"]
+    agent -->|"Remember"| memory["MemKernel<br/>Branchable<br/>memory"]
+    agent -->|"Create"| tools["AutoTool<br/>Reusable<br/>tools"]
+    agent -->|"Discover"| web["WebAgent<br/>Website<br/>tools"]
 
     classDef library fill:#103b55,stroke:#58a6ff,color:#ffffff,stroke-width:2px;
     class memory,tools,web library;
