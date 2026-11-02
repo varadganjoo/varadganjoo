@@ -1,10 +1,43 @@
-# Varad Ganjoo 👋
+![Varad Ganjoo — AI systems and software engineer. Memory, tools, and real-time agents.](assets/profile-banner.jpg)
+
+# Hi, I'm Varad 👋
 
 **AI Systems & Software Engineer**
 
 I build tools that help agents remember, act, and work with people. My projects span developer infrastructure, voice interfaces, and applied AI.
 
 [LinkedIn](https://www.linkedin.com/in/varad-ganjoo-3137631b2/) · [Email](mailto:varadganjoo@gmail.com) · [All public repositories](https://github.com/varadganjoo?tab=repositories&type=public)
+
+[Latest build](#-latest-build-local-omni-agent) · [Agent infrastructure](#-featured-projects) · [Applied AI](#️-applied-ai-systems) · [Technical stack](#️-technical-stack)
+
+## 🎧 Latest Build: Local Omni Agent
+
+[![Local Omni Agent — real-time voice and vision with local inference](https://raw.githubusercontent.com/varadganjoo/lfm3-omni-realtime-agent/main/docs/assets/banner.png)](https://github.com/varadganjoo/lfm3-omni-realtime-agent)
+
+**Talk to it. Show it your world. Keep inference on your machine.**
+
+My experimental voice-and-vision agent brings **LFM3-Omni-2B, llama.cpp, and Pipecat** together in a browser interface.
+
+- **Voice + vision:** microphone audio and recent webcam frames inform each reply.
+- **Natural interruption:** speak over a response to cancel inference and stop playback.
+- **Useful local actions:** save Markdown notes and retain facts or preferences through two validated tools.
+- **Local inference:** conversation and speech generation run on your own machine after setup.
+
+Media streams continuously; the model responds at turn boundaries. The supported setup is **Windows with an NVIDIA GPU**. This is a working experiment, not a production assistant.
+
+[Explore the project](https://github.com/varadganjoo/lfm3-omni-realtime-agent) · [Quick start](https://github.com/varadganjoo/lfm3-omni-realtime-agent#quick-start) · [Architecture](https://github.com/varadganjoo/lfm3-omni-realtime-agent/blob/main/docs/live-experiment.md) · [Verification](https://github.com/varadganjoo/lfm3-omni-realtime-agent/blob/main/docs/live-verification.md)
+
+<details>
+<summary>📸 See the voice & vision interface</summary>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/varadganjoo/lfm3-omni-realtime-agent/main/docs/assets/interface-dark.png">
+  <img src="https://raw.githubusercontent.com/varadganjoo/lfm3-omni-realtime-agent/main/docs/assets/interface-light.png" alt="Actual Local Omni Agent interface with conversation, webcam, and live session controls" width="100%">
+</picture>
+
+</details>
+
+---
 
 ## 🧩 Featured Projects
 
@@ -110,8 +143,8 @@ Nine runnable reference applications exploring retrieval, document processing, a
 ## ⚙️ Technical Stack
 
 **Languages:** Python, TypeScript, SQL  
-**Agent systems:** MCP, LangGraph, LangChain, Pydantic, PyTorch  
-**Backend & data:** FastAPI, SQLite, PostgreSQL, Redis  
+**Agent systems:** MCP, LangGraph, LangChain, Pydantic, PyTorch, llama.cpp, Pipecat  
+**Backend & data:** FastAPI, Node.js, SQLite, PostgreSQL, Redis  
 **Interfaces:** React, Tailwind CSS, Chart.js, desktop audio  
 **Delivery:** pytest, reproducible evaluations, package releases, GitHub Actions
 
